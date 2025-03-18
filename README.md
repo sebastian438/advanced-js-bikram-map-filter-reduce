@@ -115,7 +115,7 @@ const inventory = [
     price: 459
   },
   {
-    name: 'Viaje a cancún',
+    name: 'Viaje a Cancún',
     price: 600
   },
   {
@@ -126,7 +126,7 @@ const inventory = [
 
 /*
   [
-    'TV Samsung,',
+    'TV Samsung',
     'Viaje a Cancún'
   ]
 */
