@@ -241,3 +241,62 @@ const result8 = sentenceElements.reduce((acumulador,elementos) => {
 
 // console.log(result8);
 
+
+
+//EJERCICIO 09: Obtener el monto total de los elementos que pertenecen a catergory "code" en el siguiente array.
+
+// Resultado --> 60
+
+
+//Explicación: A través del método filter obtuve solo los objetos que tuviesen el la llave category con valor "code". A continuación he usado el metodo map para devolver los precios de los obejtos. Finalmente con el método reduce he sumado los precios.
+
+
+const books = [
+  {
+    name: ' JS for dummies',
+    author: 'Emily A. Vander Veer',
+    price: 20,
+    category: 'code'
+  },
+  {
+    name: 'Don Quijote de la Mancha',
+    author: 'Cervantes',
+    price: 14,
+    category: 'novel'
+  },
+  {
+    name: 'Juego de tronos',
+    author: 'George R. Martin',
+    price: 32,
+    category: 'Fantasy'
+  },
+  {
+    name: 'javascript the good parts',
+    author: 'Douglas Crockford',
+    price: 40,
+    category: 'code'
+  }
+];
+
+const objetosCategoryCode = books.filter(libros => {
+  let librosCategoryCode = libros.category == "code";
+  return librosCategoryCode;
+});
+
+// console.log(objetosCategoryCode);
+
+const preciosDeLibrosCategoryCode = objetosCategoryCode.map(libros => {
+  let precioLibros = libros.price;
+  return precioLibros;
+});
+
+// console.log(preciosDeLibrosCategoryCode);
+
+const result9 = preciosDeLibrosCategoryCode.reduce((acumulador, precio) => {
+  let sumaDePrecios = acumulador + precio;
+  return sumaDePrecios;
+}, 0)
+
+// console.log(result9);
+
+
