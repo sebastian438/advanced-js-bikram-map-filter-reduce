@@ -112,5 +112,46 @@ const result4 = numbers2.filter(num => num % 2 != 0);
 // console.log(result4);
 
 
+//EJERCICIO 05: Dado el array foodList2, genera un segundo array result5 que filtre los platos veganos y saque una sentencia como la del ejemplo: 
+// ['Que rico Tempeh me voy a comer!',
+//     'Que rica Tofu burguer me voy a comer!']
 
+//Explicación: Uso la primera vez el método filter para filtar solo los platos veganos. Por otro la do uso el método map sobre los platos veganos para ir devolviendo uno a uno los platos veganos.
+
+
+const foodList2 =[
+    {
+      name: 'Tempeh',
+      isVeggie: true
+    },
+    {
+      name: 'Cheesbacon burguer',
+      isVeggie: false
+    },
+    {
+      name: 'Tofu burguer',
+      isVeggie: true
+    },
+    {
+      name: 'Entrecot',
+      isVeggie: false
+    }];
+
+const veganos = foodList2.filter(platos => {
+    return platos.isVeggie === true;
+});
+
+
+const result5 = veganos.map(platos => {
+    if (platos.name == "Tofu burguer") {
+        return `Que rica ${platos.name} me voy a comer!`;
+    } else {
+        return `Que rico ${platos.name} me voy a comer!`;
+    }
+});
+
+// console.log(result5);
+
+
+    
 
