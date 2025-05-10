@@ -1,1 +1,104 @@
 //RESUELVE LOS EJERCICIOS AQUI
+
+//EJERCICIO 01:  Dado el array numbers cuyo valor sea [4, 5, 6, 7, 8, 9, 10], crea una función elevados que sea el resultado de elevar cada número a si mismo.
+
+
+let numbers = [4, 5, 6, 7, 8, 9, 10];
+
+const elevados = () => numbers.map((numero) => numero ** numero);
+
+// console.log(elevados());
+
+
+//EJERCICIO 02: Dado el array foodList con valor ['Pizza', 'Ramen', 'Paella', 'Entrecot'], generar un segundo array que consiga generar de salida el resultado esperado. Ejercicio 2. Dado el array foodList, generar un segundo array llamado result2 que consiga generar de salida el siguiente resultado ['Como soy de Italia, amo comer Pizza', 'Como soy de Japón, amo comer Ramen', 'Como soy de Valencia, amo comer Paella', 'Aunque no como carne, el Entrecot es sabroso']
+// [
+//     'Como soy de Italia, amo comer Pizza',
+//     'Como soy de Japón, amo comer Ramen',
+//     'Como soy de Valencia, amo comer Paella',
+//     'Aunque no como carne, el Entrecot es sabroso'
+// ]
+
+let foodList = ['Pizza', 'Ramen', 'Paella', 'Entrecot'];
+
+let result2 = foodList.map(comida => {
+    if (comida == "Pizza") {
+        return `Como soy de Italia, amo comer ${comida}`;
+    } else if (comida == "Ramen") {
+        return `Como soy de Japón, amo comer ${comida}`;
+    } else if (comida == "Paella") {
+        return `Como soy de Valencia, amo comer ${comida}`;
+    } else {
+        return `Aunque no como carne, el ${comida} es sabroso`;
+    }
+});
+
+// console.log(result2);
+
+// let result2 = [];
+
+// for (let i = 0; i < foodList.length; i++) {
+//     if (foodList[i] == "Pizza") {
+//         result2.push(`Como soy de Italia, amo comer ${foodList[i]}`);
+//     } else if (foodList[i] == "Ramen") {
+//         result2.push(`Como soy de Japón, amo comer ${foodList[i]}`);
+//     } else if (foodList[i] == "Paella") {
+//         result2.push(`Como soy de Valencia, amor comer ${foodList[i]}`);
+//     } else {
+//         result2.push(`Aunque no como carne, el ${foodList[i]} es sabroso`);
+//     }
+// }
+
+// console.log(result2);
+
+
+
+//EJERCICIO 03:  Dado el array staff, crear un segundo array que forme frases como en el ejemplo accediendo a las propiedades del objeto proporcionado:
+
+//Explicación: Uso el método map para en result3 guardar una copia del array staff, en cada iteración del map returno el resultado esperado.
+
+const staff = [
+    {
+      name: 'Pepe',
+      role: 'The Boss',
+      hobbies: ['leer', 'ver pelis']
+    },
+    {
+      name: 'Ana',
+      role: 'becaria',
+      hobbies: ['nadar', 'bailar']
+    },
+    {
+      name: 'Luis',
+      role: 'programador',
+      hobbies: ['dormir', 'comprar']
+    },
+    {
+      name: 'Carlos',
+      role: 'secretario',
+      hobbies: ['futbol', 'queso']
+    }
+  ];
+
+
+
+const  result3 = staff.map(objetos => {
+    return `${objetos.name} es ${objetos.role} y le gusta ${objetos.hobbies[0]} y ${objetos.hobbies[1]}`;
+});
+
+
+// console.log(result3);
+  
+  // Resultado esperado
+  /*
+    [
+      'Pepe es The Boss y le gusta leer y ver pelis',
+      'Ana es becaria y le gusta nadar y bailar',
+      'Luis es programador y le gusta dormir y comprar',
+      'Ana es becaria y le gusta nadar y bailar',
+      'Carlos es secretario y le gusta futbol y queso'
+    ]
+  */
+
+
+
+
