@@ -153,5 +153,46 @@ const result5 = veganos.map(platos => {
 // console.log(result5);
 
 
-    
+//EJERCICIO 06: Dado el array inventory, devolver un array con los nombres de los elementos que valgan más de 300 euros.
+
+
+//Explicacion: Primero con el método filter devuelvo los objetos que tengan un precio superior a 300, luego con el método map devuelvo el nombre de cada elemento.
+
+/*
+  [
+    'TV Samsung',
+    'Viaje a Cancún'
+  ]
+*/
+
+
+const inventory = [
+    {
+      name: 'Mobile phone',
+      price: 199
+    },
+    {
+      name: 'TV Samsung',
+      price: 459
+    },
+    {
+      name: 'Viaje a Cancún',
+      price: 600
+    },
+    {
+      name: 'Mascarilla',
+      price: 1
+    }
+  ];
+
+
+const objetosPrecioMayorA300 = inventory.filter(elementos => {
+    return elementos.price > 300;
+});
+
+const result6 = objetosPrecioMayorA300.map(elementos => {
+    return elementos.name;
+});  
+
+// console.log(result6);
 
