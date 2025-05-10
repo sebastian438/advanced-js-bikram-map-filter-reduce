@@ -101,4 +101,16 @@ const  result3 = staff.map(objetos => {
 
 
 
+//EJERCICIO 04: Crea un segundo array result4 a partir del array numbers2 que devuelva solo los impares.
+
+//Explicación: usando el método filter devuelvo los valores que cumplen la condición que sean impares. Estos valores los duplico gracias al método filter desde el array numbers.
+
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const result4 = numbers2.filter(num => num % 2 != 0);
+
+// console.log(result4);
+
+
+
 
