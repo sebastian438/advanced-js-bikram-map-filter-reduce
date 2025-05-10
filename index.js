@@ -196,3 +196,18 @@ const result6 = objetosPrecioMayorA300.map(elementos => {
 
 // console.log(result6);
 
+
+//EJERCICIO 07: Dado el siguiente array numeros [39, 2, 4, 25, 62], obten la multiplicación de todos los elementos del array.
+
+
+//Explicación: Uso el método reduce para multiplicar todos los elementos del array. El valor inicial lo pongo en 1 ya que al ser una multiplicación si multiplico por 0 daría 0 todo el rato.
+
+const numeros3 = [39, 2, 4, 25, 62];
+
+const result7  = numeros3.reduce((acumulador, num) => {
+  let multiplicacionNumeros = acumulador * num;
+  return multiplicacionNumeros;
+}, 1);
+
+// console.log(result7);
+
