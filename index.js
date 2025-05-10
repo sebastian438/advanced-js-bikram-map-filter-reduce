@@ -211,3 +211,33 @@ const result7  = numeros3.reduce((acumulador, num) => {
 
 // console.log(result7);
 
+
+
+//EJERCICIO 08: Concatena todos los elementos del array con reduce para que devuelva una sola frase 
+
+// Resultado--> 'Me llamo XX y quiero sentir la fuerza con javascript'
+
+
+//Explicación: Con el método reduce concateno los elementos del array. No pongo el nada en el valor inicial de contador, lo expreso con un template string para añadir un espacio entre el acumulador y el elemento.
+
+
+const sentenceElements = [
+  'Me',
+  'llamo',
+  "Sebas",
+  'y',
+  'quiero',
+  'sentir',
+  'la',
+  'fuerza',
+  'con',
+  'javascript'
+];
+
+const result8 = sentenceElements.reduce((acumulador,elementos) => {
+  let elementosConcatenados = `${acumulador} ${elementos}`;
+  return elementosConcatenados;
+});
+
+// console.log(result8);
+
